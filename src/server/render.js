@@ -26,6 +26,7 @@ export const renderFullPage = (html, preloadedState) => `
 				<meta name = 'viewport' content = 'width=device-width'>
 				<meta name = 'description' content = 'placeholder'>
 				<link rel ="stylesheet" href = "/client-bundle.css">
+				<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 				<link rel="icon" href="data:;base64,iVBORwOKGO=">
 			</head>
 			<body>

@@ -1,0 +1,15 @@
+#contact{
+	display:flex;
+}
+
+#contact div{
+	justify-content: center;
+	text-align:center;
+	flex:1;
+}
+
+#contact-input{
+	display:grid;
+	border-radius : 25px;
+}
+
