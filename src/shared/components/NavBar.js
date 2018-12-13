@@ -22,7 +22,7 @@ class NavBar extends Component{
 	navbar = () => {
 		return <div id = 'navbar'>
 			<div id = 'navbar-left'>
-				<div><Link to = '/'> OakPod </Link> </div>
+				<div><Link to = '/'> PodcastApp </Link> </div>
 			</div>
 			<div id = 'navbar-right'>
 				<div><Link to = '/podcasts'> Podcasts </Link></div>
