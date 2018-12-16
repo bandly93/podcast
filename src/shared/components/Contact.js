@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { ContactArray } from '../data/contactData';
 import GoogleMap from './GoogleMap';
-import '../styles/contact.css';
+import '../styles/Contact.css';
 
 class Contact extends Component{
 	constructor(){
@@ -25,7 +25,6 @@ class Contact extends Component{
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(this.state);
 	}
 
 	updateState = (e) => {
@@ -41,9 +40,31 @@ class Contact extends Component{
 			placeholder = {object.placeholder}
 			name = {object.name}
 			value = {this.state[object.name]}
+			required
 			/>
 		)
 	}
+
+	textBox = () => (
+		<textarea 
+			rows = "5"
+			name = 'message'
+			value = {this.state['message']}
+			onChange = {this.updateState} required>
+		</textarea>
+	)
+
+	telephoneInput = () => (
+		<input 
+			type = 'tel'
+			name = 'phone'
+			placeholder = 'Phone'
+			onChange = {this.updateState}
+			value = {this.state['phone']}
+			pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+			required
+		/>
+	)
 	
 	render(){
 		return<div id = 'contact'>
@@ -52,15 +73,21 @@ class Contact extends Component{
 					<h1> CONTACT US </h1>
 					<p> Want to join our podcast or have a question ? </p>
 				</div>
-				<div id = 'contact-input'>
+				<div id = 'contact-input' className = 'sim'>
 					{this.mapInput()}
 				</div>
-				<div id = 'contact-submit'>
-					<input type = 'submit' onClick = {this.handleSubmit} value = 'Send'/>
+				<div id ='contact-telephone' className ='sim'>
+					{this.telephoneInput()}
 				</div>
-			</div>
-			<div>
-				<GoogleMap />
+				<div id = 'contact-textbox' className ='sim'>
+					{this.textBox()}	
+				</div>
+				<div id = 'contact-submit'>
+					<input 
+						type = 'submit' 
+						onClick = {this.handleSubmit} 
+						value = 'SEND MESSAGE'/>
+				</div>
 			</div>
 		</div>
 	}

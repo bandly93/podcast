@@ -8,15 +8,5 @@ export const ContactArray = [
 		type : 'email',
 		placeholder :'Email',
 		name : 'email'
-	},
-	{
-		type : 'text',
-		placeholder :'Phone',
-		name : 'phone',
-	},
-	{
-		type : 'text',
-		placeholder : 'Type your message',
-		name : 'message',
-	}
+	},	
 ]

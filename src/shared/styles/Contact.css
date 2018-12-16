@@ -1,15 +1,45 @@
 #contact{
 	display:flex;
+	background-color:#eaeaea;
+	color:black;
 }
-
+#contact-top, #contact-textbox{
+	text-align :center;
+}
 #contact div{
 	justify-content: center;
-	text-align:center;
 	flex:1;
+	margin: 5%;
 }
 
-#contact-input{
-	display:grid;
+.sim input, .sim textarea{
+	padding:2%;
+	border-radius : 5px;
+	border-style:none;
+	border : 1px solid #dbd9d9;
+}
+
+#contact-input {
+	display:flex;
+}
+
+#contact-submit{
+	width: 40%;
+}
+
+#contact-submit input{
+	margin : 1%;
 	border-radius : 25px;
+	padding:5%;
 }
 
+#contact-textbox textarea{
+	width:100%;
+	height : 20vw;
+	background-color: #E0E0E0;
+}
+#contact input{
+	margin-right : 2%;
+	width:70%;
+	background-color :#E0E0E0;
+}
